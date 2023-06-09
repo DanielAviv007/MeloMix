@@ -1,0 +1,7 @@
+{
+  "UsersPath": "src/main/resources/users.json",
+  "SongsPath": "src/main/resources/songs.json",
+  "ServerPortNumber": 12345,
+  "getThreadPoolSize": 30,
+  "AlgoModule": "kmp"
+}
