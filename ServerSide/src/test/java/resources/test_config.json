@@ -1,0 +1,5 @@
+{
+  "UsersPath": "src/test/java/resources/users.json",
+  "SongsPath": "src/test/java/resources/users.json",
+  "AlgoModule": "kmp"
+}
