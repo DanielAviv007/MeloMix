@@ -1,0 +1,82 @@
+.basic-color {
+    -fx-background-color: #0072F9;
+}
+
+.card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 15;
+}
+
+.actionButton {
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-color: black;
+    -fx-font-size: 14pt;
+}
+
+.actionButton:hover {
+    -fx-background-color: #0072F9;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #0072F9;
+    -fx-font-size: 12pt;
+    -fx-border-width: 0px 0px 3.5px 0px;
+}
+
+#login-layer {
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 15;
+}
+
+#button {
+    -fx-background-color: #0072F9;
+    -fx-background-radius: 5;
+    -fx-font-size: 16pt;
+}
+
+#button:hover {
+    -fx-background-color: #11009E;
+    -fx-cursor: hand;
+}
+
+#search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+#menu-btn {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+
+#menu-btn:hover {
+    -fx-border-color: #0E0E0E;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-insets: -2;
+    -fx-cursor: hand;
+}
+
+#logout {
+    -fx-background-color: #0072F9;
+}
+
+#songAdditionForm {
+    -fx-background-color: transparent;
+    -fx-border-radius: 10;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-color: black;
+}
+
+#lyricsForm {
+    -fx-background-color: transparent;
+    -fx-font-size: 12pt;
+    -fx-border-radius: 10;
+    -fx-border-width: 3.5px 3.5px 3.5px 3.5px;
+    -fx-border-color: #0072F9;
+}
