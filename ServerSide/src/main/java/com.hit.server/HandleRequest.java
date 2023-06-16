@@ -54,7 +54,8 @@ public class HandleRequest implements Runnable {
 
                     if (username != null) {
                         User user = userController.login(username);
-                        response = new Response(true, request.getAction(), null);
+
+                        response = new Response(true, request.getAction(), gson.toJsonTree(user).getAsJsonObject());
                     }
                 }
                 case "song/add" -> {
