@@ -1,27 +1,19 @@
 package com.hit.dm;
 
+import javafx.scene.control.Button;
 import java.io.Serializable;
 
 public class Song implements Serializable {
-    private String title;
-    private String artistName;
-    private String lyrics;
-    private final Long id;
+    public String title;
+    public String artistName;
+    public String lyrics;
+    public Long id;
 
-    public Song(String title, String artistName, String lyrics) {
+    public Song(String title, String artistName, String lyrics, Long id) {
         this.title = title;
         this.artistName = artistName;
         this.lyrics = lyrics;
-
-        this.id = generateID();
-    }
-
-    private static Long generateID() {
-        // Generate a random long value between 1 and 10^9
-        long leftLimit = 1L;
-        long rightLimit = 1000000000L;
-
-        return leftLimit + (long) (Math.random() * (rightLimit - leftLimit));
+        this.id = id;
     }
 
     public String getTitle() {
@@ -50,5 +42,9 @@ public class Song implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

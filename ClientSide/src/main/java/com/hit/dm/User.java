@@ -1,31 +1,30 @@
 package com.hit.dm;
 
 import java.io.Serializable;
-import java.util.HashSet;
 import java.util.Set;
 
 public class User implements Serializable {
-    private final String username;
-    private final Set<Long> playlist;
+    public String username;
+    public Set<Long> playlist;
 
-    public User(String username) {
+    public User(String username, Set<Long> playlist) {
         this.username = username;
-        this.playlist = new HashSet<>();
+        this.playlist = playlist;
     }
 
     public String getUsername() {
-        return this.username;
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Set<Long> getPlaylist() {
-        return this.playlist;
+        return playlist;
     }
 
-    public void addSongToPlaylist(Long songId) {
-        playlist.add(songId);
-    }
-
-    public void removeSongFromPlaylist(Long songId) {
-        playlist.remove(songId);
+    public void setPlaylist(Set<Long> playlist) {
+        this.playlist = playlist;
     }
 }

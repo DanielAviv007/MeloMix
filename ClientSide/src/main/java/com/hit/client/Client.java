@@ -25,8 +25,6 @@ public class Client {
             PrintWriter writer = new PrintWriter(new OutputStreamWriter(server.getOutputStream()));
             Scanner reader = new Scanner(new InputStreamReader(server.getInputStream()));
 
-            System.out.println(request.getData());
-
             // Send request to the server
             writer.println(gson.toJson(request));
             writer.flush();
