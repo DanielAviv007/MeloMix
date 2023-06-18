@@ -3,7 +3,6 @@ package com.hit.model;
 import com.hit.client.Client;
 import com.hit.client.Request;
 import com.hit.client.RequestGenerator;
-import com.hit.client.Response;
 
 public class AddNewSong {
     public void addNewSong(String title, String artistName, String lyrics) {

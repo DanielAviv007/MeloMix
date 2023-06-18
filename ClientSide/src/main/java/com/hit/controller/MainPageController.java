@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.*;
 
 public class MainPageController extends AbstractController {
-    static User currentConnectedUser;
+    public static User currentConnectedUser;
 
     @FXML private Button addToPlaylistBtn;
     @FXML private FontAwesomeIconView logOutBtn;
