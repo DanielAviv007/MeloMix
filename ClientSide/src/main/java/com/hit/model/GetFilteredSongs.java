@@ -14,8 +14,15 @@ public class GetFilteredSongs extends SongGetter {
         String action = String.format("song/search/%s", category);
         String requestStr = String.format("{'pattern': '%s'}", pattern);
 
+        System.out.println("Action : " + action);
+        System.out.println("Pattern : " + pattern);
+                                                // song/search/artist
+//     "song/search/title", "song/search/lyrics", "song/search/artist"
+
         Request request = RequestGenerator.generateRequest(action, requestStr);
         Response response = new Client().sendRequest(request);
+
+        System.out.println("response : " + response.getJsonData());
 
         return extractSongs(response.getJsonData().get("songs"));
     }

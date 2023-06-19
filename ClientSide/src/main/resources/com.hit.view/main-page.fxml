@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.controller.MainPageController">
    <children>
-      <TableView fx:id="songTable" layoutX="214.0" layoutY="160.0" prefHeight="480.0" prefWidth="717.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="songTable" layoutX="173.0" layoutY="160.0" prefHeight="481.0" prefWidth="758.0" style="-fx-background-radius: 10;">
         <columns>
           <TableColumn fx:id="title" prefWidth="115.0" text="Title" />
           <TableColumn fx:id="artist" prefWidth="192.0" text="Artist" />
@@ -37,9 +37,13 @@
                   <FontAwesomeIconView glyphName="LIST" size="40" text="" />
                </graphic>
             </Button>
-            <FontAwesomeIconView fx:id="refresh" fill="RED" glyphName="REFRESH" layoutX="26.0" layoutY="319.0" onMouseClicked="#onRefresh" size="50" />
+            <AnchorPane layoutX="65.0" layoutY="276.0" prefHeight="34.0" prefWidth="71.0" style="-fx-cursor: hand;">
+               <children>
+                  <FontAwesomeIconView fx:id="refresh" fill="RED" glyphName="REFRESH" layoutX="14.0" layoutY="39.0" onMouseClicked="#onRefresh" size="50" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
-      <Button fx:id="modifyPlaylistSong" layoutX="503.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#onModifySongClicked" styleClass="actionButton" stylesheets="@../style.css" text="Add to playlist" />
+      <Button fx:id="modifyPlaylistSong" layoutX="483.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#onModifySongClicked" styleClass="actionButton" stylesheets="@../style.css" text="Add to playlist" />
    </children>
 </AnchorPane>
