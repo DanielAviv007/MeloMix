@@ -54,7 +54,8 @@ public class HandleRequest implements Runnable {
 
                     if (username != null) {
                         User user = userController.login(username);
-                        response = new Response(true, request.getAction(), null);
+
+                        response = new Response(true, request.getAction(), gson.toJsonTree(user).getAsJsonObject());
                     }
                 }
                 case "song/add" -> {
@@ -81,7 +82,18 @@ public class HandleRequest implements Runnable {
 //                template: {"pattern": "PATTERN"}
                     String pattern = json.get("pattern").getAsString();
                     if (pattern != null) {
-                        List<Song> matchedByTitle = songController.searchSongsByTitle(pattern);
+                        List<Song> matchedByTitle = null;
+                        switch (request.getAction()) {
+                            case  "song/search/title":
+                                matchedByTitle = songController.searchSongsByTitle(pattern);
+                                break;
+                            case "song/search/lyrics":
+                                matchedByTitle = songController.searchSongByLyrics(pattern);
+                                break;
+                            case "song/search/artist":
+                                matchedByTitle = songController.searchSongByArtistName(pattern);
+                                break;
+                        }
 
                         JsonArray songs = gson.toJsonTree(matchedByTitle).getAsJsonArray();
                         JsonObject jsonResponse = new JsonObject();
